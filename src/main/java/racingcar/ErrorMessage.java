@@ -1,0 +1,13 @@
+package racingcar;
+
+public class ErrorMessage {
+    public static final String EMPTY_CAR_LIST_INPUT = "경기에 참가할 자동차들을 입력해주세요.";
+    public static final String EMPTY_CAR_NAME = "자동차 이름을 입력해주세요.";
+    public static final String CAR_NAME_LENGTH_OVER = "자동차 이름은 5글자를 초과할 수 없습니다.";
+    public static final String INVALID_CAR_NAME
+            = "자동차 이름은 알파벳과 완성형 한글(자음 또는 모음 단독 사용 금지)만 입력할 수 있습니다.";
+
+    private ErrorMessage() {
+        throw new IllegalStateException("Error message cannot be instantiated");
+    }
+}
