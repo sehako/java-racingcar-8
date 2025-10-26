@@ -6,10 +6,15 @@ public class RacingSimulatorController {
 
     private final ConsoleWriter consoleWriter;
     private final ConsoleReader consoleReader;
+    private final RacingSimulatorFactory racingSimulatorFactory;
 
-    public RacingSimulatorController(ConsoleWriter consoleWriter, ConsoleReader consoleReader) {
+    public RacingSimulatorController(
+            ConsoleWriter consoleWriter,
+            ConsoleReader consoleReader,
+            RacingSimulatorFactory racingSimulatorFactory) {
         this.consoleWriter = consoleWriter;
         this.consoleReader = consoleReader;
+        this.racingSimulatorFactory = racingSimulatorFactory;
     }
 
     public void run() {
@@ -17,5 +22,12 @@ public class RacingSimulatorController {
         String carNames = consoleReader.readLine();
         consoleWriter.printLine(RACING_ATTEMPT_INPUT_GUIDE);
         String racingAttempt = consoleReader.readLine();
+
+        RacingSimulator racingSimulator = racingSimulatorFactory.racingSimulator();
+        racingSimulator.simulate();
+    }
+
+    public void stop() {
+        consoleReader.close();
     }
 }

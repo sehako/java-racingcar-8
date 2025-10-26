@@ -1,6 +1,8 @@
 package racingcar;
 
-public interface ConsoleReader extends AutoCloseable {
+public interface ConsoleReader {
 
     String readLine();
+
+    void close();
 }

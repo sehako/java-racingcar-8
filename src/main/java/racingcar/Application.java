@@ -3,11 +3,15 @@ package racingcar;
 public class Application {
 
     public static void main(String[] args) {
-        ConsoleWriter consoleWriter = new RacingConsoleWriter();
-        RacingConsoleReader consoleReader = new RacingConsoleReader();
-        RacingSimulatorController racingSimulatorController =
-                new RacingSimulatorController(consoleWriter, consoleReader);
+        RacingSimulatorControllerFactory racingSimulatorControllerFactory = new RacingSimulatorControllerFactory();
 
-        racingSimulatorController.run();
+        RacingSimulatorController racingSimulatorController
+                = racingSimulatorControllerFactory.racingSimulatorController();
+
+        try {
+            racingSimulatorController.run();
+        } finally {
+            racingSimulatorController.stop();
+        }
     }
 }
