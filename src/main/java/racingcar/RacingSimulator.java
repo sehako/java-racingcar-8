@@ -4,6 +4,10 @@ import camp.nextstep.edu.missionutils.Randoms;
 import java.util.List;
 
 public class RacingSimulator {
+
+    private static final String RACING_RESULT = "실행 결과";
+    private static final String RACING_PROGRESS_FORMAT = "%s : %s";
+
     private final ConsoleWriter consoleWriter;
     private final List<RacingCar> racingCars;
     private final int racingAttempt;
@@ -21,9 +25,11 @@ public class RacingSimulator {
     }
 
     public List<String> simulate() {
+        consoleWriter.printLine(RACING_RESULT);
+
         for (int i = currentAttempt; i < racingAttempt; i++) {
             processRacingAttempt();
-
+            printRacingProgress();
         }
 
         return null;
@@ -44,4 +50,11 @@ public class RacingSimulator {
         car.moveForward();
     }
 
+    private void printRacingProgress() {
+        for (RacingCar car : racingCars) {
+            String progress = String.format(RACING_PROGRESS_FORMAT, car.getName(), car.getProgress());
+            consoleWriter.printLine(progress);
+        }
+        consoleWriter.printLine("");
+    }
 }
