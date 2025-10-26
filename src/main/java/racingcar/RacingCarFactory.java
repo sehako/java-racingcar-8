@@ -23,7 +23,8 @@ public class RacingCarFactory {
     }
 
     private static RacingCar createCar(String carName) {
-        CarNameValidator.validate(carName);
-        return new RacingCar(carName);
+        String trimmedCarName = carName.trim();
+        CarNameValidator.validate(trimmedCarName);
+        return new RacingCar(trimmedCarName);
     }
 }
