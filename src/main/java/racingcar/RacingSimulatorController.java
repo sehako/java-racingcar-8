@@ -27,6 +27,16 @@ public class RacingSimulatorController {
 
         List<RacingCar> racingCars = RacingCarFactory.racingCars(carNames);
         int racingAttemptNumber = AttemptParser.parse(racingAttempt);
+
+        List<String> winners = startRacing(racingCars, racingAttemptNumber);
+
+    }
+
+    private List<String> startRacing(List<RacingCar> racingCars, int racingAttemptNumber) {
+        RacingSimulator racingSimulator = racingSimulatorFactory
+                .racingSimulator(consoleWriter, racingCars, racingAttemptNumber);
+
+        return racingSimulator.simulate();
     }
 
     public void stop() {
