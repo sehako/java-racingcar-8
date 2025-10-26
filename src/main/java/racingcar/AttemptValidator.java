@@ -3,6 +3,7 @@ package racingcar;
 import static racingcar.ErrorMessage.DECIMAL_NUMBER;
 import static racingcar.ErrorMessage.EMPTY_ATTEMPT_INPUT;
 import static racingcar.ErrorMessage.NON_NUMERIC_VALUE;
+import static racingcar.ErrorMessage.OVER_MAXIMUM_VALUE;
 import static racingcar.ErrorMessage.ZERO_OR_NEGATIVE_VALUE;
 import static racingcar.ErrorMessage.ZERO_START_VALUE;
 
@@ -11,6 +12,7 @@ import java.util.regex.Pattern;
 public class AttemptValidator {
 
     private static final Pattern ATTEMPT_PATTERN = Pattern.compile("^[0-9]+$");
+    private static final int MAXIMUM_ATTEMPT = 100;
 
     private AttemptValidator() {
         throw new IllegalStateException("Attempt validator cannot be instantiated");
@@ -53,6 +55,12 @@ public class AttemptValidator {
     private static void validateNonZeroStart(String target) {
         if (target.startsWith("0")) {
             throw new IllegalArgumentException(ZERO_START_VALUE);
+        }
+    }
+
+    public static void validateUnderMaximumRange(int attempt) {
+        if (attempt > MAXIMUM_ATTEMPT) {
+            throw new IllegalArgumentException(OVER_MAXIMUM_VALUE);
         }
     }
 }

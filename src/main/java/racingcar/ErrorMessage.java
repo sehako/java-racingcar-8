@@ -12,6 +12,7 @@ public class ErrorMessage {
     public static final String DECIMAL_NUMBER = "소수점은 입력할 수 없습니다.";
     public static final String ZERO_OR_NEGATIVE_VALUE = "0 또는 음수는 입력할 수 없습니다.";
     public static final String ZERO_START_VALUE = "시도 횟수는 0으로 시작할 수 없습니다.";
+    public static final String OVER_MAXIMUM_VALUE = "최대 시도 횟수는 100회 이하입니다.";
 
     private ErrorMessage() {
         throw new IllegalStateException("Error message cannot be instantiated");
