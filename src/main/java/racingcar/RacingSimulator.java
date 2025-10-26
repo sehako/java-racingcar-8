@@ -12,7 +12,6 @@ public class RacingSimulator {
     private final ConsoleWriter consoleWriter;
     private final List<RacingCar> racingCars;
     private final int racingAttempt;
-    private int currentAttempt;
 
     public RacingSimulator(
             List<RacingCar> racingCars,
@@ -22,13 +21,12 @@ public class RacingSimulator {
         this.racingCars = racingCars;
         this.consoleWriter = consoleWriter;
         this.racingAttempt = racingAttempt;
-        currentAttempt = 0;
     }
 
     public List<String> simulate() {
         consoleWriter.printLine(RACING_RESULT);
 
-        for (int i = currentAttempt; i < racingAttempt; i++) {
+        for (int i = 0; i < racingAttempt; i++) {
             processRacingAttempt();
             printRacingProgress();
         }
