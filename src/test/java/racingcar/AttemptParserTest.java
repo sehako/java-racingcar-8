@@ -1,6 +1,5 @@
 package racingcar;
 
-import java.math.BigInteger;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -13,10 +12,10 @@ class AttemptParserTest {
         String attempt = "1000";
 
         // when
-        BigInteger result = AttemptParser.parse(attempt);
+        int result = AttemptParser.parse(attempt);
 
         // then
-        Assertions.assertThat(result).isEqualTo(new BigInteger(attempt));
+        Assertions.assertThat(result).isEqualTo(Integer.parseInt(attempt));
     }
 
 }

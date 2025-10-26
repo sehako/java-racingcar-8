@@ -1,10 +1,11 @@
 package racingcar;
 
-import java.math.BigInteger;
-
 public class AttemptParser {
-    public static BigInteger parse(String attempt) {
+
+    public static int parse(String attempt) {
         AttemptValidator.validate(attempt);
-        return new BigInteger(attempt);
+        int parsedAttempt = Integer.parseInt(attempt);
+
+        return parsedAttempt;
     }
 }
