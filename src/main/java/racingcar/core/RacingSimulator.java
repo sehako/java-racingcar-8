@@ -1,8 +1,10 @@
-package racingcar;
+package racingcar.core;
 
 import camp.nextstep.edu.missionutils.Randoms;
 import java.util.List;
 import java.util.stream.Collectors;
+import racingcar.domain.RacingCar;
+import racingcar.io.ConsoleWriter;
 
 public class RacingSimulator {
 

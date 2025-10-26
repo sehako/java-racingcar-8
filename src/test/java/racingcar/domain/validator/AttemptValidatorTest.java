@@ -1,10 +1,10 @@
-package racingcar;
+package racingcar.domain.validator;
 
-import static racingcar.ErrorMessage.DECIMAL_NUMBER;
-import static racingcar.ErrorMessage.EMPTY_ATTEMPT_INPUT;
-import static racingcar.ErrorMessage.NON_NUMERIC_VALUE;
-import static racingcar.ErrorMessage.ZERO_OR_NEGATIVE_VALUE;
-import static racingcar.ErrorMessage.ZERO_START_VALUE;
+import static racingcar.io.ErrorMessage.DECIMAL_NUMBER;
+import static racingcar.io.ErrorMessage.EMPTY_ATTEMPT_INPUT;
+import static racingcar.io.ErrorMessage.NON_NUMERIC_VALUE;
+import static racingcar.io.ErrorMessage.ZERO_OR_NEGATIVE_VALUE;
+import static racingcar.io.ErrorMessage.ZERO_START_VALUE;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

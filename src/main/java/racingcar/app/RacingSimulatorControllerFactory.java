@@ -1,4 +1,10 @@
-package racingcar;
+package racingcar.app;
+
+import racingcar.core.RacingSimulatorFactory;
+import racingcar.io.ConsoleReader;
+import racingcar.io.ConsoleWriter;
+import racingcar.io.RacingConsoleReader;
+import racingcar.io.RacingConsoleWriter;
 
 public class RacingSimulatorControllerFactory {
 

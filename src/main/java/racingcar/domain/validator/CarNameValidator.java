@@ -1,9 +1,9 @@
-package racingcar;
+package racingcar.domain.validator;
 
-import static racingcar.ErrorMessage.CAR_NAME_LENGTH_OVER;
-import static racingcar.ErrorMessage.EMPTY_CAR_LIST_INPUT;
-import static racingcar.ErrorMessage.EMPTY_CAR_NAME;
-import static racingcar.ErrorMessage.INVALID_CAR_NAME;
+import static racingcar.io.ErrorMessage.CAR_NAME_LENGTH_OVER;
+import static racingcar.io.ErrorMessage.EMPTY_CAR_LIST_INPUT;
+import static racingcar.io.ErrorMessage.EMPTY_CAR_NAME;
+import static racingcar.io.ErrorMessage.INVALID_CAR_NAME;
 
 import java.util.regex.Pattern;
 

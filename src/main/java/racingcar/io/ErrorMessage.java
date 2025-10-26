@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.io;
 
 public class ErrorMessage {
     public static final String EMPTY_CAR_LIST_INPUT = "경기에 참가할 자동차들을 입력해주세요.";

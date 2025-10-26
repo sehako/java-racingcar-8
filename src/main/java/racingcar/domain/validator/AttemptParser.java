@@ -1,8 +1,8 @@
-package racingcar;
+package racingcar.domain.validator;
 
-import static racingcar.AttemptValidator.validate;
-import static racingcar.AttemptValidator.validateUnderMaximumRange;
-import static racingcar.ErrorMessage.OVER_MAXIMUM_VALUE;
+import static racingcar.domain.validator.AttemptValidator.validate;
+import static racingcar.domain.validator.AttemptValidator.validateUnderMaximumRange;
+import static racingcar.io.ErrorMessage.OVER_MAXIMUM_VALUE;
 
 public class AttemptParser {
 
