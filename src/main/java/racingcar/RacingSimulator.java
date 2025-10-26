@@ -32,7 +32,16 @@ public class RacingSimulator {
     private void processRacingAttempt() {
         for (RacingCar car : racingCars) {
             int roulette = Randoms.pickNumberInRange(0, 9);
+            moveRacingCar(car, roulette);
         }
+    }
+
+    private void moveRacingCar(RacingCar car, int roulette) {
+        if (roulette < 4) {
+            return;
+        }
+
+        car.moveForward();
     }
 
 }
