@@ -15,7 +15,7 @@ class RacingCarTest {
         racingCar.moveForward();
 
         // then
-        Assertions.assertThat(racingCar.getPosition()).isEqualTo(1);
+        Assertions.assertThat(racingCar.getProgress()).isEqualTo("-");
     }
 
 }

@@ -1,6 +1,5 @@
 package racingcar;
 
-import java.math.BigInteger;
 import java.util.List;
 import org.assertj.core.api.Assertions;
 import org.assertj.core.groups.Tuple;
@@ -19,10 +18,10 @@ class RacingCarFactoryTest {
 
         // then
         Assertions.assertThat(racingCars).hasSize(2)
-                .extracting("name", "position")
+                .extracting("name", "progress")
                 .containsExactlyInAnyOrder(
-                        Tuple.tuple("sehak", BigInteger.ZERO),
-                        Tuple.tuple("let", BigInteger.ZERO)
+                        Tuple.tuple("sehak", ""),
+                        Tuple.tuple("let", "")
                 );
     }
 

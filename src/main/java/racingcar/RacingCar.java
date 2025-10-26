@@ -2,22 +2,22 @@ package racingcar;
 
 public class RacingCar {
     private String name;
-    private int position;
+    private String progress;
 
     public RacingCar(String name) {
         this.name = name;
-        this.position = 0;
+        this.progress = "";
     }
 
     public String getName() {
         return name;
     }
 
-    public int getPosition() {
-        return position;
+    public String getProgress() {
+        return progress;
     }
 
     public void moveForward() {
-        this.position++;
+        this.progress += "-";
     }
 }
