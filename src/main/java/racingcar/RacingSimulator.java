@@ -2,6 +2,7 @@ package racingcar;
 
 import camp.nextstep.edu.missionutils.Randoms;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class RacingSimulator {
 
@@ -32,7 +33,7 @@ public class RacingSimulator {
             printRacingProgress();
         }
 
-        return null;
+        return findWinner();
     }
 
     private void processRacingAttempt() {
@@ -56,5 +57,25 @@ public class RacingSimulator {
             consoleWriter.printLine(progress);
         }
         consoleWriter.printLine("");
+    }
+
+    private List<String> findWinner() {
+        int maxProgress = getMaximumProgress();
+
+        return racingCars.stream()
+                .filter(racingCar -> {
+                    String progress = racingCar.getProgress();
+                    return progress.length() == maxProgress;
+                })
+                .map(RacingCar::getName)
+                .collect(Collectors.toList());
+    }
+
+    private int getMaximumProgress() {
+        return racingCars.stream()
+                .mapToInt(racingCar -> {
+                    String progress = racingCar.getProgress();
+                    return progress.length();
+                }).max().orElse(0);
     }
 }
