@@ -1,5 +1,6 @@
 package racingcar;
 
+import java.math.BigInteger;
 import java.util.List;
 
 public class RacingSimulatorController {
@@ -26,6 +27,7 @@ public class RacingSimulatorController {
         String racingAttempt = consoleReader.readLine();
 
         List<RacingCar> racingCars = RacingCarFactory.racingCars(carNames);
+        BigInteger racingAttemptNumber = AttemptParser.parse(racingAttempt);
     }
 
     public void stop() {
