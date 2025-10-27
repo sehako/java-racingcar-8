@@ -1,31 +1,20 @@
 package racingcar.domain;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import racingcar.util.validator.CarNameValidator;
+import racingcar.util.parser.CarNameParser;
 
 public class RacingCarFactory {
-    private static final String CAR_NAME_DELIMITER = ",";
 
     public static List<RacingCar> racingCars(String carNames) {
-        validateInput(carNames);
-        return parseCarNames(carNames).stream()
+        List<String> parsedCarNames = CarNameParser.parse(carNames);
+
+        return parsedCarNames.stream()
                 .map(RacingCarFactory::createCar)
                 .collect(Collectors.toList());
     }
 
-    private static void validateInput(String carNames) {
-        CarNameValidator.validateNotBlankInput(carNames);
-    }
-
-    private static List<String> parseCarNames(String carNames) {
-        return Arrays.asList(carNames.split(CAR_NAME_DELIMITER));
-    }
-
     private static RacingCar createCar(String carName) {
-        String trimmedCarName = carName.trim();
-        CarNameValidator.validate(trimmedCarName);
-        return new RacingCar(trimmedCarName);
+        return new RacingCar(carName);
     }
 }
