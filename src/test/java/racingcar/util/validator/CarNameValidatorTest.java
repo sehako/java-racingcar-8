@@ -1,4 +1,4 @@
-package racingcar.domain.validator;
+package racingcar.util.validator;
 
 import static racingcar.util.io.ErrorMessage.CAR_NAME_LENGTH_OVER;
 import static racingcar.util.io.ErrorMessage.EMPTY_CAR_LIST_INPUT;
@@ -10,7 +10,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import racingcar.util.validator.CarNameValidator;
 
 class CarNameValidatorTest {
 
