@@ -3,7 +3,7 @@ package racingcar.domain;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import racingcar.domain.validator.CarNameValidator;
+import racingcar.util.validator.CarNameValidator;
 
 public class RacingCarFactory {
     private static final String CAR_NAME_DELIMITER = ",";

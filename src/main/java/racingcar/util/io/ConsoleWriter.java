@@ -1,4 +1,4 @@
-package racingcar.io;
+package racingcar.util.io;
 
 public interface ConsoleWriter {
 

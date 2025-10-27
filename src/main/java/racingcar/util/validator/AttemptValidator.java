@@ -1,11 +1,11 @@
-package racingcar.domain.validator;
+package racingcar.util.validator;
 
-import static racingcar.io.ErrorMessage.DECIMAL_NUMBER;
-import static racingcar.io.ErrorMessage.EMPTY_ATTEMPT_INPUT;
-import static racingcar.io.ErrorMessage.NON_NUMERIC_VALUE;
-import static racingcar.io.ErrorMessage.OVER_MAXIMUM_VALUE;
-import static racingcar.io.ErrorMessage.ZERO_OR_NEGATIVE_VALUE;
-import static racingcar.io.ErrorMessage.ZERO_START_VALUE;
+import static racingcar.util.io.ErrorMessage.DECIMAL_NUMBER;
+import static racingcar.util.io.ErrorMessage.EMPTY_ATTEMPT_INPUT;
+import static racingcar.util.io.ErrorMessage.NON_NUMERIC_VALUE;
+import static racingcar.util.io.ErrorMessage.OVER_MAXIMUM_VALUE;
+import static racingcar.util.io.ErrorMessage.ZERO_OR_NEGATIVE_VALUE;
+import static racingcar.util.io.ErrorMessage.ZERO_START_VALUE;
 
 import java.util.regex.Pattern;
 

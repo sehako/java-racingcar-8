@@ -2,7 +2,7 @@ package racingcar.core;
 
 import java.util.List;
 import racingcar.domain.RacingCar;
-import racingcar.io.ConsoleWriter;
+import racingcar.util.io.ConsoleWriter;
 
 public class RacingSimulatorFactory {
     public RacingSimulator racingSimulator(
