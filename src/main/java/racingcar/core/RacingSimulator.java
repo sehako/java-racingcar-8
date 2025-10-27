@@ -10,6 +10,7 @@ public class RacingSimulator {
 
     private static final String RACING_RESULT = "실행 결과";
     private static final String RACING_PROGRESS_FORMAT = "%s : %s";
+    private static final int MOVING_FORWARD = 4;
 
     private final ConsoleWriter consoleWriter;
     private final List<RacingCar> racingCars;
@@ -45,11 +46,15 @@ public class RacingSimulator {
     }
 
     private void moveRacingCar(RacingCar car, int roulette) {
-        if (roulette < 4) {
+        if (isImmovable(roulette)) {
             return;
         }
 
         car.moveForward();
+    }
+
+    private boolean isImmovable(int roulette) {
+        return roulette < MOVING_FORWARD;
     }
 
     private void printRacingProgress() {
