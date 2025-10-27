@@ -26,6 +26,7 @@ public class RacingSimulator {
     }
 
     public List<String> simulate() {
+        consoleWriter.printNewLine();
         consoleWriter.printLine(RACING_RESULT);
 
         for (int i = 0; i < racingAttempt; i++) {
