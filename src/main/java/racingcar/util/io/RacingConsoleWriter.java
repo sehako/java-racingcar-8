@@ -6,4 +6,9 @@ public class RacingConsoleWriter implements ConsoleWriter {
     public void printLine(String message) {
         System.out.println(message);
     }
+
+    @Override
+    public void printNewLine() {
+        System.out.println();
+    }
 }

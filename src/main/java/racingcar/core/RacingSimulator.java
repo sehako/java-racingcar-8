@@ -56,7 +56,7 @@ public class RacingSimulator {
             String progress = String.format(RACING_PROGRESS_FORMAT, car.getName(), car.getProgress());
             consoleWriter.printLine(progress);
         }
-        consoleWriter.printLine("");
+        consoleWriter.printNewLine();
     }
 
     private List<String> findWinner() {
